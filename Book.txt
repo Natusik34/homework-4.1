@@ -1,0 +1,13 @@
+package com.company;
+
+public class Book implements Printable{
+    static void printBooks(Printable[] printable){
+        for (Printable pr: printable){
+            if (pr instanceof Book)
+                pr.print();
+        }
+    }
+    public void print(){
+        System.out.println("Вывод книг");
+    }
+}
